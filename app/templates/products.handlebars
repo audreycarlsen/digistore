@@ -1,0 +1,11 @@
+<div class='row'>
+  <ul class='list-unstyled'>
+    {{# each }}
+      <div>
+        {{# link-to "product" this }}
+          {{ name }}
+        {{/ link-to }}
+      </div>
+    {{/ each }}
+  </ul>
+</div>
