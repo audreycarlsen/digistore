@@ -2,10 +2,13 @@
 
   {{# each items }}
     <li>
-      {{this.product.name}}
+      <strong>{{this.product.name}}</strong><br>
+      <em>${{to_dollars this.current_price}} x {{this.quantity}}</em>
     </li><br>
-  {{else}}
+  {{ else }}
     Your cart is emptier than a black hole.
   {{/ each }}
 
+  <strong>Subtotal:</strong><br>
+  FUCK YOU
 </ul>
