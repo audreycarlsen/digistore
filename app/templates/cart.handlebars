@@ -3,7 +3,11 @@
   {{# each items }}
     <li>
       <strong>{{this.product.name}}</strong><br>
-      <em>${{to_dollars this.current_price}} x {{this.quantity}}</em>
+      <em>${{to_dollars this.current_price}} x {{this.quantity}}</em><br>
+      <div class="btn-group btn-group-xs">
+        <a href="#" class="btn btn-default">+</a>
+        <a href="#" class="btn btn-default">-</a>
+      </div>
     </li><br>
   {{ else }}
     Your cart is emptier than a black hole.

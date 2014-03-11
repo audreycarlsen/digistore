@@ -45,7 +45,7 @@ function program1(depth0,data) {
   data.buffer.push(" x ");
   stack1 = helpers._triageMustache.call(depth0, "quantity", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</em>\n    </li><br>\n  ");
+  data.buffer.push("</em><br>\n      <div class=\"btn-group btn-group-xs\">\n        <a href=\"#\" class=\"btn btn-default\">+</a>\n        <a href=\"#\" class=\"btn btn-default\">-</a>\n      </div>\n    </li><br>\n  ");
   return buffer;
   }
 
@@ -81,7 +81,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(")</small>\n    </h1>\n    ");
   stack1 = helpers._triageMustache.call(depth0, "description", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </div>\n</div>");
+  data.buffer.push("\n\n    <br><br><a href=\"#\" class=\"btn btn-default\">Add to cart</a>\n  </div>\n</div>");
   return buffer;
   
 });
