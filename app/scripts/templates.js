@@ -35,7 +35,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("This is your cart.");
+  data.buffer.push("This is your cart.\n");
   
 });
 
