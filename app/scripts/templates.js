@@ -32,10 +32,29 @@ function program3(depth0,data) {
 Ember.TEMPLATES["cart"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', stack1, self=this;
+
+function program1(depth0,data) {
   
+  var buffer = '', stack1;
+  data.buffer.push("\n    <li>\n      ");
+  stack1 = helpers._triageMustache.call(depth0, "product.name", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n    </li><br>\n  ");
+  return buffer;
+  }
 
+function program3(depth0,data) {
+  
+  
+  data.buffer.push("\n    Your cart is emptier than a black hole.\n  ");
+  }
 
-  data.buffer.push("This is your cart.\n");
+  data.buffer.push("<ul class='list-unstyled'>\n\n  ");
+  stack1 = helpers.each.call(depth0, "items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n\n</ul>");
+  return buffer;
   
 });
 

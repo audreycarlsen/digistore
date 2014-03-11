@@ -1,1 +1,11 @@
-This is your cart.
+<ul class='list-unstyled'>
+
+  {{# each items }}
+    <li>
+      {{this.product.name}}
+    </li><br>
+  {{else}}
+    Your cart is emptier than a black hole.
+  {{/ each }}
+
+</ul>
