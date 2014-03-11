@@ -1,8 +1,9 @@
 App.Product = DS.Model.extend({
-  name: DS.attr("string"),
-  price: DS.attr("number"),
+  name:        DS.attr("string"),
+  price:       DS.attr("number"),
   description: DS.attr("string"),
-  image: DS.attr("string"),
+  image:       DS.attr("string"),
+  item:        DS.belongsTo("item", {async: true});
 });
 
 App.Product.FIXTURES = [
