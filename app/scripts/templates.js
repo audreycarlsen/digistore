@@ -50,7 +50,7 @@ function program1(depth0,data) {
   data.buffer.push(">-</a>\n        </div>\n      </td>\n      <td>$");
   data.buffer.push(escapeExpression((helper = helpers.to_dollars || (depth0 && depth0.to_dollars),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "to_dollars", "subtotal", options))));
   data.buffer.push("</td>\n      <td><a href=\"#\" class=\"btn btn-danger btn-xs\" ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "remove", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "removeFromCart", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
   data.buffer.push(">Remove</a></td>\n    </tr>\n  ");
   return buffer;
   }
@@ -73,6 +73,9 @@ function program2(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</table>\n\n<strong>Subtotal:</strong> $");
   data.buffer.push(escapeExpression((helper = helpers.to_dollars || (depth0 && depth0.to_dollars),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "to_dollars", "total", options))));
+  data.buffer.push("<br><br>\n\n<a href=\"#\" class=\"btn btn-blue btn-sm\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(">Checkout</a>");
   return buffer;
   
 });

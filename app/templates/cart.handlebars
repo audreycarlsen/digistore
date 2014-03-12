@@ -19,9 +19,11 @@
         </div>
       </td>
       <td>${{ to_dollars subtotal }}</td>
-      <td><a href="#" class="btn btn-danger btn-xs" {{ action "remove" this }}>Remove</a></td>
+      <td><a href="#" class="btn btn-danger btn-xs" {{ action "removeFromCart" this }}>Remove</a></td>
     </tr>
   {{/ each }}
 </table>
 
-<strong>Subtotal:</strong> ${{ to_dollars total }}
+<strong>Subtotal:</strong> ${{ to_dollars total }}<br><br>
+
+<a href="#" class="btn btn-blue btn-sm" {{ action "checkout" this }}>Checkout</a>
