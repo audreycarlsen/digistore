@@ -3,4 +3,5 @@ App.Router.map(function(){
     this.resource('product', { path: ":product_id" });
   });
   this.resource('cart');
+  this.resource('checkout');
 });
