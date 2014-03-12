@@ -1,23 +1,25 @@
-
 <table class="table">
   <tr>
-      <th>Item</th>
-      <th>Quantity</th>
-      <th>Unit Price</th>
-    </th>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Unit Price</th>
   </tr>
   {{# each items }}
     <tr>
-      <td><img {{ bind-attr src=this.product.image }} height="50" width="50"> {{this.product.name}}</td>
+      <td>
+        {{# link-to "product" this.product }}
+          <img {{ bind-attr src=this.product.image }} height="50" width="50">
+          {{ this.product.name }}
+        {{/ link-to }}
       <td>{{ this.quantity }}
-      <span class="btn-group btn-group-xs">
-        <a href="#" class="btn btn-default" {{ action "more" this }}>+</a>
-        <a href="#" class="btn btn-default" {{ action "less" this }}>-</a>
-      </span>
-    </td>
-    <td>${{ to_dollars this.subtotal }}</td>
+        <span class="btn-group btn-group-xs">
+          <a href="#" class="btn btn-success" {{ action "more" this }}>+</a>
+          <a href="#" class="btn btn-danger" {{ action "less" this }}>-</a>
+        </span>
+      </td>
+      <td>${{ to_dollars this.subtotal }}</td>
     </tr>
   {{/ each }}
 </table>
 
-  <strong>Subtotal:</strong> ${{ to_dollars total }}
+<strong>Subtotal:</strong> ${{ to_dollars total }}
