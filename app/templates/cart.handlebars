@@ -9,15 +9,15 @@
       <td>
         {{# link-to "product" this.product }}
           <img {{ bind-attr src=this.product.image }} height="50" width="50">
-          {{ this.product.name }}
+          {{ product.name }}
         {{/ link-to }}
-      <td>{{ this.quantity }}<br>
+      <td>{{ quantity }}<br>
         <div class="btn-group btn-group-xs">
           <a href="#" class="btn btn-success" {{ action "more" this }}>+</a>
           <a href="#" class="btn btn-danger" {{ action "less" this }}>-</a>
         </div>
       </td>
-      <td>${{ to_dollars this.subtotal }}</td>
+      <td>${{ to_dollars subtotal }}</td>
     </tr>
   {{/ each }}
 </table>
