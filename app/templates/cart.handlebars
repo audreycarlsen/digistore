@@ -1,18 +1,23 @@
-<ul class='list-unstyled'>
 
+<table class="table">
+  <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Unit Price</th>
+    </th>
+  </tr>
   {{# each items }}
-    <li>
-      <strong>{{this.product.name}}</strong><br>
-      <em>${{to_dollars this.current_price}} x {{this.quantity}}</em><br>
-      <div class="btn-group btn-group-xs">
+    <tr>
+      <td><img {{ bind-attr src=this.product.image }} height="50" width="50"> {{this.product.name}}</td>
+      <td>{{ this.quantity }}
+      <span class="btn-group btn-group-xs">
         <a href="#" class="btn btn-default" {{ action "more" this }}>+</a>
         <a href="#" class="btn btn-default" {{ action "less" this }}>-</a>
-      </div>
-    </li><br>
-  {{ else }}
-    Your cart is emptier than a black hole.
+      </span>
+    </td>
+    <td>${{ to_dollars this.subtotal }}</td>
+    </tr>
   {{/ each }}
+</table>
 
-  <strong>Subtotal:</strong><br>
-  {{ total }}
-</ul>
+  <strong>Subtotal:</strong> ${{ to_dollars total }}

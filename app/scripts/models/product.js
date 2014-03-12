@@ -9,17 +9,17 @@ App.Product = DS.Model.extend({
 App.Product.FIXTURES = [
   {
     id:          1,
-    name:        "Ark of the Covenant",
+    name:        "Aged White Cheddar Puffs",
     price:       5000,
-    image:       "http://files.abovetopsecret.com/files/img/qr52b675e9.jpg",
-    description: "Contains the Ten Commandments. Also included: Aaron's rod, a jar of manna, and the first Torah.",
+    image:       "http://aws.bettymills.com/store/images/product/BFG34856.JPG",
+    description: "Terry Richardson mlkshk Williamsburg synth freegan. Carles kale chips bicycle rights banjo single-origin coffee post-ironic. Readymade vinyl food truck aesthetic, keytar lo-fi Williamsburg single-origin coffee roof party brunch High Life Cosby sweater church-key. Roof party VHS pop-up asymmetrical, polaroid synth tattooed flexitarian. Put a bird on it small batch messenger bag, sriracha tofu dreamcatcher DIY. Ethnic paleo Helvetica, chia scenester bicycle rights disrupt DIY chambray food truck. Art party food truck irony, tousled four loko Shoreditch vegan pour-over gentrify asymmetrical squid salvia.",
     item:        1
   }, {
     id:          2,
-    name:        "Bust of Friedrich Schiller",
+    name:        "Nutella",
     price:       275,
-    image:       "http://i.usatoday.net/tech/_photos/2008/05/05/schillerx.jpg",
-    description: "Schiller has been shattered several times, glued back together at least twice, and replaced with a new replica on occasion, but he lives on.",
+    image:       "http://www.nutella.com/image/journal/article?img_id=1064300&t=1378368718314",
+    description: "Whatever wolf Schlitz, Tumblr ethical Godard seitan tousled mixtape Portland bicycle rights. Marfa aesthetic brunch cardigan single-origin coffee. Carles ennui 90's mlkshk, ethnic normcore Portland irony yr letterpress bespoke. Chillwave fixie McSweeney's tousled, vegan tote bag tofu roof party. Street art cardigan hoodie aesthetic pug single-origin coffee. Put a bird on it tote bag Portland Godard Cosby sweater slow-carb chillwave pug. Four loko Tonx synth, put a bird on it master cleanse semiotics YOLO VHS narwhal sartorial.",
     item:        2
   }
 ]
