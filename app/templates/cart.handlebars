@@ -11,11 +11,11 @@
           <img {{ bind-attr src=this.product.image }} height="50" width="50">
           {{ this.product.name }}
         {{/ link-to }}
-      <td>{{ this.quantity }}
-        <span class="btn-group btn-group-xs">
+      <td>{{ this.quantity }}<br>
+        <div class="btn-group btn-group-xs">
           <a href="#" class="btn btn-success" {{ action "more" this }}>+</a>
           <a href="#" class="btn btn-danger" {{ action "less" this }}>-</a>
-        </span>
+        </div>
       </td>
       <td>${{ to_dollars this.subtotal }}</td>
     </tr>

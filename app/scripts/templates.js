@@ -43,11 +43,11 @@ function program1(depth0,data) {
   data.buffer.push("\n      <td>");
   stack1 = helpers._triageMustache.call(depth0, "quantity", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n        <span class=\"btn-group btn-group-xs\">\n          <a href=\"#\" class=\"btn btn-success\" ");
+  data.buffer.push("<br>\n        <div class=\"btn-group btn-group-xs\">\n          <a href=\"#\" class=\"btn btn-success\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "more", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
   data.buffer.push(">+</a>\n          <a href=\"#\" class=\"btn btn-danger\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "less", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">-</a>\n        </span>\n      </td>\n      <td>$");
+  data.buffer.push(">-</a>\n        </div>\n      </td>\n      <td>$");
   data.buffer.push(escapeExpression((helper = helpers.to_dollars || (depth0 && depth0.to_dollars),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "to_dollars", "subtotal", options))));
   data.buffer.push("</td>\n    </tr>\n  ");
   return buffer;
