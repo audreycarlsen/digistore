@@ -24,7 +24,7 @@ function program3(depth0,data) {
   data.buffer.push("</p>\n  <hr>\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  \n  <div class='text-muted'><small>Footer</small></div>\n</div>\n");
+  data.buffer.push("\n  <br><br>\n  \n  <div class='text-muted'><small>I totally know what I'm doing.</small></div>\n</div>\n");
   return buffer;
   
 });
@@ -73,7 +73,7 @@ function program2(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</table>\n\n<strong>Subtotal:</strong> $");
   data.buffer.push(escapeExpression((helper = helpers.to_dollars || (depth0 && depth0.to_dollars),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "to_dollars", "total", options))));
-  data.buffer.push("<br><br>\n\n<a href=\"#\" class=\"btn btn-blue btn-sm\" ");
+  data.buffer.push("<br><br>\n\n<a href=\"#\" class=\"btn btn-primary btn-sm\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
   data.buffer.push(">Checkout</a>");
   return buffer;
