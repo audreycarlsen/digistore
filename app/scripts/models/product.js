@@ -10,7 +10,7 @@ App.Product.FIXTURES = [
   {
     id:          1,
     name:        "Aged White Chiddar Piffs",
-    price:       5000,
+    price:       290,
     image:       "http://aws.bettymills.com/store/images/product/BFG34856.JPG",
     description: "Terry Richardson mlkshk Williamsburg synth freegan. Carles kale chips bicycle rights banjo single-origin coffee post-ironic. Readymade vinyl food truck aesthetic, keytar lo-fi Williamsburg single-origin coffee roof party brunch High Life Cosby sweater church-key. Roof party VHS pop-up asymmetrical, polaroid synth tattooed flexitarian. Put a bird on it small batch messenger bag, sriracha tofu dreamcatcher DIY. Ethnic paleo Helvetica, chia scenester bicycle rights disrupt DIY chambray food truck. Art party food truck irony, tousled four loko Shoreditch vegan pour-over gentrify asymmetrical squid salvia.",
     item:        1

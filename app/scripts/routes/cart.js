@@ -9,9 +9,12 @@ App.CartRoute = Ember.Route.extend({
     less: function (item) {
       var quantity = item.get('quantity');
 
-      if (quantity > 0) {
+      if (quantity > 1) {
         item.decrementProperty('quantity');
       }
+    },
+    remove: function (item) {
+      item.decrementProperty('quantity');
     }
   }
 });

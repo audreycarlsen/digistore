@@ -11,7 +11,7 @@ App.Item = DS.Model.extend({
 App.Item.FIXTURES = [
   {
     id:            1,
-    current_price: 5000,
+    current_price: 290,
     quantity:      5,
     cart:          1,
     product:       1

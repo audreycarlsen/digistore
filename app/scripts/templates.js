@@ -6,7 +6,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("Pirate's Bitty!");
+  data.buffer.push("Pirate's Booty");
   }
 
 function program3(depth0,data) {
@@ -49,7 +49,9 @@ function program1(depth0,data) {
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "less", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
   data.buffer.push(">-</a>\n        </div>\n      </td>\n      <td>$");
   data.buffer.push(escapeExpression((helper = helpers.to_dollars || (depth0 && depth0.to_dollars),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "subtotal", options) : helperMissing.call(depth0, "to_dollars", "subtotal", options))));
-  data.buffer.push("</td>\n    </tr>\n  ");
+  data.buffer.push("</td>\n      <td><a href=\"#\" class=\"btn btn-danger btn-xs\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "remove", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(">Remove</a></td>\n    </tr>\n  ");
   return buffer;
   }
 function program2(depth0,data) {
@@ -66,7 +68,7 @@ function program2(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<table class=\"table\">\n  <tr>\n    <th>Item</th>\n    <th>Quantity</th>\n    <th>Unit Price</th>\n  </tr>\n  ");
+  data.buffer.push("<table class=\"table\">\n  <tr>\n    <th>Item</th>\n    <th>Quantity</th>\n    <th>Unit Price</th>\n    <th>Edit</th>\n  </tr>\n  ");
   stack1 = helpers.each.call(depth0, "items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</table>\n\n<strong>Subtotal:</strong> $");
@@ -128,7 +130,7 @@ function program2(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<div class='row'>\n  <div class='col-lg-3'>\n    <h4>All Products</h4>\n    <ul class='list-unstyled'>\n      ");
+  data.buffer.push("<div class='row'>\n  <div class='col-lg-3'>\n    <h4>Ye Olde Treasure Chest</h4>\n    <ul class='list-unstyled'>\n      ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    </ul>\n  </div>\n  <div class='col-lg-9'>\n    ");
