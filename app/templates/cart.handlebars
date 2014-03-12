@@ -5,8 +5,8 @@
       <strong>{{this.product.name}}</strong><br>
       <em>${{to_dollars this.current_price}} x {{this.quantity}}</em><br>
       <div class="btn-group btn-group-xs">
-        <a href="#" class="btn btn-default">+</a>
-        <a href="#" class="btn btn-default">-</a>
+        <a href="#" class="btn btn-default" {{ action "more" this }}>+</a>
+        <a href="#" class="btn btn-default" {{ action "less" this }}>-</a>
       </div>
     </li><br>
   {{ else }}
@@ -14,5 +14,5 @@
   {{/ each }}
 
   <strong>Subtotal:</strong><br>
-  FUCK YOU
+  {{ total }}
 </ul>

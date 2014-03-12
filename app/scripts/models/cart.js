@@ -7,14 +7,26 @@ App.Cart = DS.Model.extend({
 //     items.then(function(items) {
 //       items.forEach(function(item) {
 //         subtotal += item.get('quantity') * item.get('current_price');
-
 //       });
-
 //     });
 //     console.log(subtotal);
     
 //     return subtotal;
 //   }.property('items')
+  total: function(){
+    var items = this.get('items');
+
+    var subtotals = items.map(function(item) {
+      return item.get('subtotal');
+    });
+
+    var total = subtotals.reduce(function(previousValue, currentValue) {
+      return previousValue + currentValue;
+    }, 0);
+
+    return total;
+
+  }.property('items.@each.subtotal')
 });
 
 App.Cart.FIXTURES = [
