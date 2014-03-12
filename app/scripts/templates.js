@@ -6,7 +6,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("Pirate's Booty");
+  data.buffer.push("Pirate's Bitty!");
   }
 
 function program3(depth0,data) {
@@ -18,7 +18,7 @@ function program3(depth0,data) {
   data.buffer.push("<div class='container'>\n  <h1>");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "products", options) : helperMissing.call(depth0, "link-to", "products", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</h1>\n  <p class='lead'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>\n  <p>");
+  data.buffer.push("</h1>\n  <p class='lead'>Snack up me hearties, yo ho.</p>\n  <p>");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "cart", options) : helperMissing.call(depth0, "link-to", "cart", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n  <hr>\n  ");
