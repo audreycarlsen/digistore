@@ -20,6 +20,10 @@ App.CartRoute = Ember.Route.extend({
         });
         item.deleteRecord();
       });
+    },
+    checkout: function (cart) {
+      console.log(cart);
+      this.transitionTo("checkout");
     }
   }
 });

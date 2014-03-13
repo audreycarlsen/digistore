@@ -70,25 +70,62 @@ function program2(depth0,data) {
   return buffer;
   }
 
+function program4(depth0,data) {
+  
+  
+  data.buffer.push("\n  <button class=\"btn btn-info btn-sm\">Checkout</button>\n");
+  }
+
   data.buffer.push("<table class=\"table\">\n  <tr>\n    <th>Item</th>\n    <th>Quantity</th>\n    <th>Unit Price</th>\n    <th>Edit</th>\n  </tr>\n  ");
   stack1 = helpers.each.call(depth0, "items", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</table>\n\n<strong>Subtotal:</strong> $");
   data.buffer.push(escapeExpression((helper = helpers.to_dollars || (depth0 && depth0.to_dollars),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "total", options) : helperMissing.call(depth0, "to_dollars", "total", options))));
-  data.buffer.push("<br><br>\n\n<a href=\"#\" class=\"btn btn-primary btn-sm\" ");
-  data.buffer.push(escapeExpression(helpers.action.call(depth0, "checkout", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
-  data.buffer.push(">Checkout</a>");
+  data.buffer.push("<br><br>\n\n");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "checkout", options) : helperMissing.call(depth0, "link-to", "checkout", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   return buffer;
   
 });
 
-Ember.TEMPLATES["new_order"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["checkout"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
+  var buffer = '', helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("Checkout info hurrrr");
+  data.buffer.push("<div class=\"row\">\n  <div class=\"col-md-6\">\n    <div class=\"row\">\n      <div class=\"col-md-6\">\n        <p><strong>CUSTOMER INFORMATION</strong></p>\n\n        <p>Name:<br>\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'value': ("name")
+  },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</p>\n\n        <p>Email:<br>\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'value': ("email")
+  },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</p>\n\n        <p>Zipcode:<br>\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'value': ("zipcode")
+  },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</p>\n      </div>\n\n      <div class=\"col-md-6\">\n        <p><strong>CARD INFORMATION</strong></p>\n\n        <p>Card number:<br>\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'value': ("cc_number")
+  },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</p>\n\n        <p>Expiration date:<br>\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'value': ("exp_date")
+  },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</p>\n\n        <p>Security code:<br>\n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'value': ("cvv")
+  },hashTypes:{'type': "STRING",'value': "ID"},hashContexts:{'type': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</p>\n      </div>\n    </div>\n  </div>\n</div>\n\n<button class=\"btn btn-info btn-sm\">Purchase</button>");
+  return buffer;
   
 });
 
