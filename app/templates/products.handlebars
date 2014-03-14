@@ -6,7 +6,8 @@
         <li>
           {{# link-to "product" this }}
           <img {{ bind-attr src=image }} height="50" width="50">
-          {{ name }}
+          {{ name }}<br>
+          ${{ to_dollars price }}
           {{/ link-to }}
         </li><br>
       {{/ each }}
