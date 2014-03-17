@@ -1,12 +1,6 @@
 App.CartRoute = Ember.Route.extend({
-  beforeModel: function() {
-    if (typeof localStorage.cart_id === 'undefined') {
-      this.store.createRecord("cart");
-    }
-  },
-
   model: function () {
-    return this.store.find("cart", 1);
+    return this.store.find("cart", localStorage.cart_id);
   },
 
   actions: {
@@ -21,7 +15,7 @@ App.CartRoute = Ember.Route.extend({
       }
     },
     removeFromCart: function(item) {
-      this.store.find("cart", 1).then(function(cart){
+      this.store.find("cart", localStorage.cart_id).then(function(cart){
         cart.get("items").then(function(items) {
           items.removeObject(item);
         });

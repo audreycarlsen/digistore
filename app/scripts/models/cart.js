@@ -1,5 +1,6 @@
 App.Cart = DS.Model.extend({
   items: DS.hasMany("item", {async: true}),
+  order: DS.belongsTo("order", {async: true}),
   total: function(){
     var items = this.get('items');
     var subtotals = items.map(function(item) {
