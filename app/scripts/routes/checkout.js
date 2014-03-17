@@ -13,6 +13,7 @@ App.CheckoutRoute = Ember.Route.extend({
 
       order.save().then(function(order) {
         self.transitionTo('confirmation', order.get('id'));
+        localStorage.cart_id = null;
       }, function(error) {
         order.deleteRecord().then(function(error) {
           alert(error.responseText);

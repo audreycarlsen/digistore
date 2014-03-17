@@ -1,7 +1,14 @@
 App.CartRoute = Ember.Route.extend({
+  beforeModel: function() {
+    if (typeof localStorage.cart_id === 'undefined') {
+      this.store.createRecord("cart");
+    }
+  },
+
   model: function () {
     return this.store.find("cart", 1);
   },
+
   actions: {
     more: function (item) {
       item.incrementProperty('quantity');
