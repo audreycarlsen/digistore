@@ -1,15 +1,21 @@
 <h2>You're an admin! I'm an admin! We're all admins!</h2>
 
-<ul class='list-unstyled'>
-  {{# each }}
-    <li>
-      {{# link-to "product" this }}
-        <img {{ bind-attr src=image }} height="50" width="50">
-        {{ name }}
-      {{/ link-to }}
-      (${{ to_dollars price }})<br>
-      <button class="btn btn-success btn-xs">Edit</button>
-      <button class="btn btn-danger btn-xs" {{ action "deleteProduct" this }}>Delete</button>
-    </li><br>
-  {{/ each }}
-</ul>
+<div class='row'>
+  <div class='col-lg-3'>
+    <ul class='list-unstyled'>
+    {{# each }}
+      <li>
+        {{# link-to "editProduct" this }}
+          <img {{ bind-attr src=image }} height="50" width="50">
+          {{ name }}
+        {{/ link-to }}
+        (${{ to_dollars price }})<br>
+      </li><br>
+    {{/ each }}
+    </ul>
+  </div>
+
+  <div class='col-lg-9'>
+    {{outlet}}
+  </div>
+</div>
