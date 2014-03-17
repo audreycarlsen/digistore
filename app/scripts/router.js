@@ -7,5 +7,6 @@ App.Router.map(function(){
   this.resource('confirmation', { path: "order/:order_id" });
   this.resource("admin", function () {
     this.resource("editProduct", { path: ":product_id" });
+    this.resource("newProduct", {path: "products/new"});
   });
 });

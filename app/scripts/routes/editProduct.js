@@ -7,7 +7,7 @@ App.EditProductRoute = Ember.Route.extend({
   actions: {
     saveProduct: function(product) {
       product.save();
-      alert("Congratulations, your booty has been udpated.");
+      alert("Your booty has been udpated.");
       this.transitionTo('admin');
 
     },
