@@ -7,5 +7,8 @@ App.ApplicationRoute = Ember.Route.extend({
         localStorage.cart_id = newCart.get('id');
       });
     }
+  },
+  model: function() {
+    return this.store.find("cart", 'fixture-0');
   }
 });

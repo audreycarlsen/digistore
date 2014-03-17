@@ -13,13 +13,13 @@ App.Item.FIXTURES = [
     id:            1,
     current_price: 290,
     quantity:      5,
-    cart:          1,
+    cart:          'fixture-5',
     product:       1
   }, {
     id:            2,
     current_price: 275,
     quantity:      8,
-    cart:          1,
+    cart:          'fixture-5',
     product:       2
   }
 ]

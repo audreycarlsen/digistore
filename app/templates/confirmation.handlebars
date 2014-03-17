@@ -2,4 +2,9 @@ You gave us your $$! Yay!<br>
 ID: {{ id }}<br>
 Cart: {{ cart.id }}<br>
 Name: {{ name }}<br>
-Products: {{ cart.items }}
+Price: {{ cart.total }}
+
+Products:
+{{# each cart.items }}
+  {{ product.name }}
+{{/ each }}
