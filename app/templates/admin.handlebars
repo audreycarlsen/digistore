@@ -1,1 +1,15 @@
-Admin page.
+<h2>You're an admin! I'm an admin! We're all admins!</h2>
+
+<ul class='list-unstyled'>
+  {{# each }}
+    <li>
+      {{# link-to "product" this }}
+        <img {{ bind-attr src=image }} height="50" width="50">
+        {{ name }}
+      {{/ link-to }}
+      (${{ to_dollars price }})<br>
+      <button class="btn btn-success btn-xs">Edit</button>
+      <button class="btn btn-danger btn-xs" {{ action "deleteProduct" this }}>Delete</button>
+    </li><br>
+  {{/ each }}
+</ul>

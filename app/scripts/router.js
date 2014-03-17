@@ -5,5 +5,5 @@ App.Router.map(function(){
   this.resource('cart');
   this.resource('checkout');
   this.resource('confirmation', { path: "order/:order_id" });
-  this.route('admin');
+  this.resource('admin');
 });

@@ -27,5 +27,11 @@ App.Product.FIXTURES = [
     price:       400,
     image:       "http://upload.wikimedia.org/wikipedia/commons/f/fc/Froot-Loops-Cereal-Bowl.jpg",
     description: "Meh Williamsburg organic cray Helvetica. Bicycle rights raw denim selfies iPhone fashion axe chia. 90's Tumblr farm-to-table Marfa drinking vinegar. Letterpress 3 wolf moon Tonx, freegan Schlitz put a bird on it authentic Bushwick scenester drinking vinegar. Godard pug Wes Anderson YOLO master cleanse, church-key disrupt pop-up whatever. Portland gluten-free meh, raw denim tattooed polaroid normcore disrupt. Gentrify lomo stumptown, letterpress fingerstache American Apparel narwhal pop-up Tonx 8-bit."
+  }, {
+    id:          4,
+    name:        "Freeet Leeeeeps",
+    price:       1230,
+    image:       "http://upload.wikimedia.org/wikipedia/commons/f/fc/Froot-Loops-Cereal-Bowl.jpg",
+    description: "Meh Williamsburg organic cray Helvetica. Bicycle rights raw denim selfies iPhone fashion axe chia. 90's Tumblr farm-to-table Marfa drinking vinegar. Letterpress 3 wolf moon Tonx, freegan Schlitz put a bird on it authentic Bushwick scenester drinking vinegar. Godard pug Wes Anderson YOLO master cleanse, church-key disrupt pop-up whatever. Portland gluten-free meh, raw denim tattooed polaroid normcore disrupt. Gentrify lomo stumptown, letterpress fingerstache American Apparel narwhal pop-up Tonx 8-bit."
   }
 ]
