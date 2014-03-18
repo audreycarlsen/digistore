@@ -15,7 +15,7 @@ App.CartRoute = Ember.Route.extend({
       }
     },
     removeFromCart: function(item) {
-      this.store.find("cart", 'fixture-0').then(function(cart){
+      this.store.find("cart", localStorage.cart_id).then(function(cart){
         cart.get("items").then(function(items) {
           items.removeObject(item);
         });

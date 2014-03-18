@@ -1,6 +1,5 @@
 App.Cart = DS.Model.extend({
   items: DS.hasMany("item", {async: true}),
-  order: DS.belongsTo("order", {async: true}),
   total: function(){
     var items = this.get('items');
     var subtotals = items.map(function(item) {
@@ -12,10 +11,3 @@ App.Cart = DS.Model.extend({
     return total;
   }.property('items.@each.subtotal')
 });
-
-App.Cart.FIXTURES = [
-  {
-    id:    'fixture-0',
-    items: [1, 2]
-  }
-]

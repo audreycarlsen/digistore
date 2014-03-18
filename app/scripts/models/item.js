@@ -7,19 +7,3 @@ App.Item = DS.Model.extend({
     return this.get('quantity') * this.get('current_price');
   }.property('quantity', 'current_price')
 });
-
-App.Item.FIXTURES = [
-  {
-    id:            1,
-    current_price: 290,
-    quantity:      5,
-    cart:          'fixture-5',
-    product:       1
-  }, {
-    id:            2,
-    current_price: 275,
-    quantity:      8,
-    cart:          'fixture-5',
-    product:       2
-  }
-]

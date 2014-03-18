@@ -11,7 +11,7 @@ App.ProductRoute = Ember.Route.extend({
         current_price: unique_product.get("price")
       });
 
-      this.store.find("cart", 'fixture-0').then(function(cart){
+      this.store.find("cart", localStorage.cart_id).then(function(cart){
         item.set("cart", cart);
         item.save();
         cart.get("items").then(function(items) {
