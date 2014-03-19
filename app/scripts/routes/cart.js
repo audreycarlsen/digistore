@@ -1,6 +1,6 @@
 App.CartRoute = Ember.Route.extend({
   model: function () {
-    return this.modelFor("application");
+    return this.store.find("cart", localStorage.cartId);
   },
 
   actions: {
@@ -15,7 +15,7 @@ App.CartRoute = Ember.Route.extend({
       }
     },
     removeFromCart: function(item) {
-      this.store.find("cart", localStorage.cart_id).then(function(cart){
+      this.store.find("cart", localStorage.cartId).then(function(cart){
         cart.get("items").then(function(items) {
           items.removeObject(item);
         });
