@@ -11,8 +11,6 @@ App.CheckoutRoute = Ember.Route.extend({
       self.store.find("cart", localStorage.cartId).then(function(cart){
         order.set("cart", cart);
         order.save();
-        cart.set("order", order);
-        cart.save();
       });
 
       order.save().then(function(order) {

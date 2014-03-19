@@ -1,7 +1,6 @@
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
     if (typeof(localStorage.cartId) === "undefined") {
-      debugger;
       var cart = this.store.createRecord("cart");
       cart.save().then(function(cartObject) {
         localStorage.cartId = cartObject.get('id');
