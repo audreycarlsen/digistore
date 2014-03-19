@@ -10,6 +10,7 @@ App.CheckoutRoute = Ember.Route.extend({
       self.store.find("cart", localStorage.cartId).then(function(cart){
 
         order.set("cart", cart);
+
         order.save().then(function(order) {
           self.transitionTo('confirmation', order.get('id'));
           localStorage.removeItem('cartId');
@@ -20,9 +21,8 @@ App.CheckoutRoute = Ember.Route.extend({
             return cartObject;
           });
         }, function(error) {
-          order.deleteRecord().then(function(error) {
-            alert(error.responseText);
-          });
+            alert("There was a problem processing your order.");
+            self.transitionTo('checkout'); 
         });
       });
     }
