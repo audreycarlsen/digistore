@@ -7,7 +7,7 @@ App.EditProductRoute = Ember.Route.extend({
     saveProduct: function(product) {
       product.save();
       alert("Your booty has been updated.");
-      this.transitionTo('admin');
+      this.transitionTo('manageProducts');
 
     },
     deleteProduct: function(product) {

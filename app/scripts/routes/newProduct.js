@@ -11,7 +11,7 @@ App.NewProductRoute = Ember.Route.extend({
       product.save().then(
         function () {
           alert("Booty successfully created.");
-          self.transitionTo("admin");
+          self.transitionTo("manageProducts");
         },
         function (error) {
           alert(error.responseText);

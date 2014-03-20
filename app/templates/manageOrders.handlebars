@@ -7,5 +7,20 @@
       Total: ${{ to_dollars cart.total }}<br>
       Status: {{ status }}
     </li><br>
+
+    <label>
+        {{view Ember.RadioButton name="selectionTest" selectionBinding="isSelected" value="1"}}
+        Yes
+    </label>
+    
+    <label>
+        {{view Ember.RadioButton name="selectionTest" selectionBinding="isSelected" value="0"}}
+        No
+    </label>
+    
+    <div>Is Selected: {{isSelected}}</div>
+</script>
+
+
   {{/ each }}
 </ul>

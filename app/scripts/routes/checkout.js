@@ -23,8 +23,7 @@ App.CheckoutRoute = Ember.Route.extend({
           });
         }, function(error) {
             order.deleteRecord();
-            order.save();
-            alert("There was a problem processing your order.");
+            alert(error.responseText);
             self.transitionTo('checkout'); 
         });
       });
