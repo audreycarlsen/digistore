@@ -5,5 +5,6 @@ App.Order = DS.Model.extend({
   zipcode:   DS.attr("string"),
   cc_number: DS.attr("string"),
   exp_date:  DS.attr("string"),
-  cvv:       DS.attr("string")
+  cvv:       DS.attr("string"),
+  status:    DS.attr("string")
 });

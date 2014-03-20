@@ -2,19 +2,10 @@
 
 <div class='row'>
   <div class='col-lg-3'>
-    <p>{{# link-to "newProduct" class="btn btn-warning btn-sm" }}New Booty{{/ link-to }}</p><br>
-
-    <ul class='list-unstyled'>
-    {{# each }}
-      <li>
-        {{# link-to "editProduct" this }}
-          <img {{ bind-attr src=image }} height="50" width="50">
-          {{ name }}
-        {{/ link-to }}
-        (${{ to_dollars price }})<br>
-      </li><br>
-    {{/ each }}
-    </ul>
+    <br>
+    <p>{{# link-to "manageOrders" class="btn btn-info btn-sm" }}Manage Orders{{/ link-to }}</p>
+    <p>{{# link-to "manageProducts" class="btn btn-warning btn-sm" }}Manage Products{{/ link-to }}</p>
+    <p>{{# link-to "newProduct" class="btn btn-success btn-sm" }}New Booty?{{/ link-to }}</p><br>
   </div>
 
   <div class='col-lg-9'>

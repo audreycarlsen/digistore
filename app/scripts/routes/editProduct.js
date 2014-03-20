@@ -1,6 +1,5 @@
 App.EditProductRoute = Ember.Route.extend({
   model: function(params) {
-    debugger;
     return this.store.find("product", params.product_id);
   },
 
