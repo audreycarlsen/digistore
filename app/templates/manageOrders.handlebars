@@ -2,8 +2,10 @@
 <ul class='list-unstyled'>
   {{# each }}
     <li>
-      {{ id }}
-      ${{ to_dollars cart.total }}
+      {{# link-to "confirmation" this }}Order #{{ id }}{{/ link-to}}<br>
+      Name: {{ name }}<br>
+      Total: ${{ to_dollars cart.total }}<br>
+      Status: {{ status }}
     </li><br>
   {{/ each }}
 </ul>
