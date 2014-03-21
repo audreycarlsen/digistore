@@ -17,7 +17,3 @@ Ember.RadioButton = Ember.View.extend({
         return this.get("value") == this.get("selection");   
     }.property()
 });
-
-App.ApplicationController = Ember.ObjectController.extend({
-    isSelected:0
-});

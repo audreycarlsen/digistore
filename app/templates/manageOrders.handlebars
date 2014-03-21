@@ -9,16 +9,14 @@
     </li><br>
 
     <label>
-        {{view Ember.RadioButton name="selectionTest" selectionBinding="isSelected" value="1"}}
-        Yes
+        {{view Ember.RadioButton name="selectionTest" selectionBinding="status" value="paid"}}
+        Paid
     </label>
     
     <label>
-        {{view Ember.RadioButton name="selectionTest" selectionBinding="isSelected" value="0"}}
-        No
+        {{view Ember.RadioButton name="selectionTest" selectionBinding="status" value="cancelled"}}
+        Cancelled
     </label>
-    
-    <div>Is Selected: {{isSelected}}</div>
 </script>
 
 

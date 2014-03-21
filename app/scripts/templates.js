@@ -303,19 +303,16 @@ function program1(depth0,data) {
   data.buffer.push("\n    </li><br>\n\n    <label>\n        ");
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.RadioButton", {hash:{
     'name': ("selectionTest"),
-    'selectionBinding': ("isSelected"),
-    'value': ("1")
+    'selectionBinding': ("status"),
+    'value': ("paid")
   },hashTypes:{'name': "STRING",'selectionBinding': "STRING",'value': "STRING"},hashContexts:{'name': depth0,'selectionBinding': depth0,'value': depth0},contexts:[depth0],types:["ID"],data:data})));
-  data.buffer.push("\n        Yes\n    </label>\n    \n    <label>\n        ");
+  data.buffer.push("\n        Paid\n    </label>\n    \n    <label>\n        ");
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.RadioButton", {hash:{
     'name': ("selectionTest"),
-    'selectionBinding': ("isSelected"),
-    'value': ("0")
+    'selectionBinding': ("status"),
+    'value': ("cancelled")
   },hashTypes:{'name': "STRING",'selectionBinding': "STRING",'value': "STRING"},hashContexts:{'name': depth0,'selectionBinding': depth0,'value': depth0},contexts:[depth0],types:["ID"],data:data})));
-  data.buffer.push("\n        No\n    </label>\n    \n    <div>Is Selected: ");
-  stack1 = helpers._triageMustache.call(depth0, "isSelected", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</div>\n</script>\n\n\n  ");
+  data.buffer.push("\n        Cancelled\n    </label>\n</script>\n\n\n  ");
   return buffer;
   }
 function program2(depth0,data) {
