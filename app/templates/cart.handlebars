@@ -1,5 +1,3 @@
-Cart ID: {{ id }}<br>
-
 {{#if items}}  
 
   <table class="table">
@@ -13,13 +11,13 @@ Cart ID: {{ id }}<br>
       <tr>
         <td>
           {{# link-to "product" this.product }}
-            <img {{ bind-attr src=this.product.image }} height="50" width="50">
+            <img {{ bind-attr src=this.product.image }} height="50" width="50" class="avatar">
             {{ product.name }}
           {{/ link-to }}
         <td>
           {{ quantity }}
           <div class="btn-group btn-group-xs">
-            <a href="#" class="btn btn-success" {{ action "more" this }}>+</a>
+            <a href="#" class="btn btn-warning" {{ action "more" this }}>+</a>
             <a href="#" class="btn btn-danger" {{ action "less" this }}>-</a>
           </div>
         </td>
@@ -31,7 +29,7 @@ Cart ID: {{ id }}<br>
 
   <strong>Subtotal:</strong> ${{ to_dollars total }}<br><br>
 
-  {{# link-to "checkout" class="btn btn-success" }}Checkout{{/ link-to }}
+  {{# link-to "checkout" class="btn btn-default" }}Checkout{{/ link-to }}
 
 {{else}}   
   Your cart is empty, lonelier than a black hole.

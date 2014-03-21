@@ -3,7 +3,7 @@
   {{# each }}
     <li>
       {{# link-to "editProduct" this }}
-        <img {{ bind-attr src=image }} height="50" width="50">
+        <img {{ bind-attr src=image }} height="50" width="50" class="avatar"s>
         {{ name }}
       {{/ link-to }}
       (${{ to_dollars price }})<br>

@@ -1,0 +1,43 @@
+#pirate-header {
+  font-family: 'Pirata One', cursive;
+  font-size: 75px;
+}
+
+.pirate-slogan {
+  font-family: 'Pirata One', cursive;
+  font-size: 25px;
+}
+
+.product-name {
+  font-family: 'Pirata One', cursive;
+  font-size: 45px;
+}
+
+body {
+  background-color: #171717;
+  color: #ebebeb;
+}
+
+a {
+  color: #d60000;
+  outline: 0;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f5eb24;
+}
+
+a:focus {
+  text-decoration: none;
+  color: #f5eb24;
+  outline: 0;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+img {
+  border: solid 2px #d60000;
+}

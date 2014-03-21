@@ -4,11 +4,11 @@
   </div>
   <div class='col-lg-9'>
     <h1>
-      {{ name }} 
+      <span class="product-name">{{ name }} </span><br>
       <small class='muted'>(${{ to_dollars price }})</small>
     </h1>
     {{ description }}
 
-    <br><br><a class="btn btn-success" {{ action "addToCart" this }}>Add to Cart</a>
+    <br><br><a class="btn btn-default" {{ action "addToCart" this }}>Add to Cart</a>
   </div>
 </div>
