@@ -6,7 +6,7 @@ App.ProductRoute = Ember.Route.extend({
   actions: {
     addToCart: function(product) {
       var store = this.store;
-      this.controllerFor("application").get("cart").then(function(cart){
+      this.controllerFor("application").get("cart").then(function (cart){
         cart.get("items").then(function (items) {
           return items.find(function (item) {
             return item.get("product").get("id") == product.get("id");

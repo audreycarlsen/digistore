@@ -3,13 +3,10 @@ App.ApplicationController = Ember.ObjectController.extend({
   init: function () {
     if (typeof(localStorage.cartId) === "undefined") {
       var cart = this.store.createRecord("cart");
-      cart.save().then(function(cartObject) {
+      cart.save().then(function (cartObject) {
         localStorage.cartId = cartObject.get('id');
       });
     }
-    
-    var cart = this.store.find("cart", localStorage.cartId);
-
-    this.set("cart", cart)
+    this.set("cart", this.store.find("cart", localStorage.cartId));
   }
 });

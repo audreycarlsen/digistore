@@ -6,22 +6,25 @@ App.CheckoutRoute = Ember.Route.extend({
   actions: {
     purchase: function(proxy) {
       var self = this;
-      var order = this.store.createRecord("order", proxy);
-      self.store.find("cart", localStorage.cartId).then(function(cart){
 
+      this.controllerFor("application").get("cart").then(function (cart) {
+
+        var order = self.store.createRecord("order", proxy);
+        
         order.set("cart", cart);
         order.set("status", "paid");
 
-        order.save().then(function(order) {
-          self.transitionTo('confirmation', order.get('id'));
+        order.save().then(function (order) {
+          self.transitionTo('confirmation', order);
           localStorage.removeItem('cartId');
         
           var cart = self.store.createRecord("cart");
-          cart.save().then(function(cartObject) {
+
+          cart.save().then(function (cartObject) {
             localStorage.cartId = cartObject.get('id');
-            return cartObject;
+            self.controllerFor("application").set("cart", self.store.find("cart", localStorage.cartId));
           });
-        }, function(error) {
+        }, function (error) {
             order.deleteRecord();
             alert(error.responseText);
             self.transitionTo('checkout'); 
