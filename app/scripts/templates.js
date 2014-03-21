@@ -298,21 +298,12 @@ function program1(depth0,data) {
   data.buffer.push("<br>\n      Total: $");
   data.buffer.push(escapeExpression((helper = helpers.to_dollars || (depth0 && depth0.to_dollars),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "cart.total", options) : helperMissing.call(depth0, "to_dollars", "cart.total", options))));
   data.buffer.push("<br>\n      Status: ");
-  stack1 = helpers._triageMustache.call(depth0, "status", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    </li><br>\n\n    <label>\n        ");
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.RadioButton", {hash:{
-    'name': ("selectionTest"),
-    'selectionBinding': ("status"),
-    'value': ("paid")
-  },hashTypes:{'name': "STRING",'selectionBinding': "STRING",'value': "STRING"},hashContexts:{'name': depth0,'selectionBinding': depth0,'value': depth0},contexts:[depth0],types:["ID"],data:data})));
-  data.buffer.push("\n        Paid\n    </label>\n    \n    <label>\n        ");
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.RadioButton", {hash:{
-    'name': ("selectionTest"),
-    'selectionBinding': ("status"),
-    'value': ("cancelled")
-  },hashTypes:{'name': "STRING",'selectionBinding': "STRING",'value': "STRING"},hashContexts:{'name': depth0,'selectionBinding': depth0,'value': depth0},contexts:[depth0],types:["ID"],data:data})));
-  data.buffer.push("\n        Cancelled\n    </label>\n</script>\n\n\n  ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'value': ("status")
+  },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push(" <button class=\"btn btn-info btn-xs\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveOrder", "", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0,depth0],types:["STRING","ID"],data:data})));
+  data.buffer.push(">Update</button>\n    </li><br>\n  ");
   return buffer;
   }
 function program2(depth0,data) {

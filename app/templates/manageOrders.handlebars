@@ -5,20 +5,7 @@
       {{# link-to "confirmation" this }}Order #{{ id }}{{/ link-to}}<br>
       Name: {{ name }}<br>
       Total: ${{ to_dollars cart.total }}<br>
-      Status: {{ status }}
+      Status: {{ input value=status }} <button class="btn btn-info btn-xs" {{action "saveOrder" this}}>Update</button>
     </li><br>
-
-    <label>
-        {{view Ember.RadioButton name="selectionTest" selectionBinding="status" value="paid"}}
-        Paid
-    </label>
-    
-    <label>
-        {{view Ember.RadioButton name="selectionTest" selectionBinding="status" value="cancelled"}}
-        Cancelled
-    </label>
-</script>
-
-
   {{/ each }}
 </ul>

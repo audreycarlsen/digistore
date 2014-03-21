@@ -12,7 +12,7 @@ App.CheckoutRoute = Ember.Route.extend({
         var order = self.store.createRecord("order", proxy);
         
         order.set("cart", cart);
-        order.set("status", "paid");
+        order.set("status", "Paid");
 
         order.save().then(function (order) {
           self.transitionTo('confirmation', order);
